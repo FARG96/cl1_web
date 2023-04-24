@@ -1,0 +1,23 @@
+CREATE DATABASE ec1_rodriguez;
+--
+USE ec1_rodriguez;
+--
+CREATE TABLE tb_areas
+(
+id_area INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+nom_area VARCHAR(20),
+cant_clien_area INT
+);
+--
+CREATE TABLE tb_clientes
+(
+id_cliente INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+nom_cliente VARCHAR(20),
+id_area INT,
+dni VARCHAR(8),
+edad INT,
+ciudad VARCHAR(20),
+FOREIGN KEY (id_area)
+REFERENCES tb_areas (id_area)
+);
+--

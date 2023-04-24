@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Crear cliente</title>
+	</head>
+	
+	<body>
+		<h1>Formulario creación de cliente</h1>
+		<br>
+		<form method="POST" action="@{/CrearCliente}" th:object="${cliente}">
+			<input type="hidden" id="id_cliente" th:field="*{id_cliente}">
+			<div>
+				<p>Nombre cliente</p>
+				<input type="text" class="form-control" id="nom_cliente" th:field="*{nom_cliente}">
+			</div>
+			<div>
+				<p>Id area</p>
+				<input type="text" class="form-control" id="id_area" th:field="*{id_area}"> 			
+			</div>
+			<div>
+				<p>DNI</p>
+				<input type="text" class="form-control" id="dni" th:field="*{dni}">
+			</div>
+			<div>
+				<p>Edad</p>
+				<input type="text" class="form-control" id="edad" th:field="*{edad}">
+			</div>
+			<div>
+				<p>Ciudad</p>
+				<input type="text" class="form-control" id="ciudad" th:field="*{ciudad}">
+			</div>
+			<div>
+				<button type="submit" class="btn btn-success">GUARDAR</button>
+			</div>
+		</form>
+	</body>
+</html>
