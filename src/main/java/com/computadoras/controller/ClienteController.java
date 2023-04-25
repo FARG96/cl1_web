@@ -17,6 +17,7 @@ public class ClienteController {
 	@Autowired
 	private IClienteRepository repo;
 	
+	// Método get para la vista de clientes
 	@GetMapping("/registrar")
 	public String registroClientes(Model model) 
 	{
@@ -25,6 +26,7 @@ public class ClienteController {
 		return "registro";
 	}
 	
+	// Método post para el almacenamiento de clientes
 	@PostMapping("/registrar")
 	public String postRegistroClientes(Cliente cliente)
 	{
@@ -32,6 +34,7 @@ public class ClienteController {
 		return "listado";
 	}
 	
+	// Método para mostrar el listado de clientes
 	@GetMapping("/listar")
 	public String listadoClientes(Model model) {
 		model.addAttribute("lstClientes", repo.findAll());
