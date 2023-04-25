@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 	<head>
 		<title>Crear cliente</title>
@@ -7,11 +6,11 @@
 	<body>
 		<h1>Formulario creación de cliente</h1>
 		<br>
-		<form method="POST" action="@{/CrearCliente}" th:object="${cliente}">
+		<form method="POST" th:action="@{/registrar}" th:object="${cliente}">
 			<input type="hidden" id="id_cliente" th:field="*{id_cliente}">
 			<div>
 				<p>Nombre cliente</p>
-				<input type="text" class="form-control" id="nom_cliente" th:field="*{nom_cliente}">
+				<input type="text" class="form-control" id="nom_cliente" th:field="*{nombre_cliente}">
 			</div>
 			<div>
 				<p>Id area</p>

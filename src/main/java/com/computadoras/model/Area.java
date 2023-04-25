@@ -2,12 +2,14 @@ package com.computadoras.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
 @Table (name = "tb_areas")
 public class Area {
 
+	@Id
 	@Column(name = "id_area")
 	private int id_area;
 	

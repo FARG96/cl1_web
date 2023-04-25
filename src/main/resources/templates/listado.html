@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+	<head>
+		<title> Listado </title>
+		<meta http-equiv ="Content Type" content ="text/html; charset = UTF-8">
+	</head>
+	<body>
+		<table>
+			<th:block th:each="p: ${lstClientes}">
+				<tr>
+					<td th:text="${p.id_cliente}"></td>
+					<td th:text="${p.nombre_cliente}"></td>
+				</tr>
+			</th:block>
+		</table>
+	</body>
+</html>

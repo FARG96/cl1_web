@@ -16,7 +16,7 @@ public class Cliente {
 	@Column(name = "id_cliente")
 	private int id_cliente;
 
-	@Column(name = "nombre_cliente")
+	@Column(name = "nom_cliente")
 	private String nombre_cliente;
 	
 	@Column(name = "id_area")
@@ -69,7 +69,6 @@ public class Cliente {
 	public void setCiudad(String ciudad) {
 		this.ciudad = ciudad;
 	}
-	
 	
 	
 }
